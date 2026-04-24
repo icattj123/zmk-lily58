@@ -16,6 +16,23 @@
 &soft_off { /delete-property/ split-peripheral-off-on-press; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <27 28>;
+            timeout-ms = <30>;
+            slow-release;
+            layers = <0>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <31 32>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
